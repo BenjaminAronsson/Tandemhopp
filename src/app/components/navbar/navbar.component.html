@@ -3,17 +3,34 @@
     <button mat-icon-button *ngIf="useDropDown">
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <h1>Skydive</h1>
+    <span>Skydive</span>
     <span class="menu-spacer"></span>
     <div *ngIf="!useDropDown">
       <a mat-button *ngFor="let link of links" [routerLink]="'/' + link.link">
         {{ link.name.toLocaleUpperCase() }}
       </a>
     </div>
+    <span class="flexExpand"></span>
+    <div *ngIf="!useDropDown">
+      <button mat-raised-button color="accent" class="action-button">
+        Boka en tid
+      </button>
+      <button mat-raised-button color="accent" class="action-button">
+        Köp ett hopp
+      </button>
+    </div>
   </mat-toolbar-row>
 
-  <mat-toolbar-row>
-    <span style="font-size: 12px">Tandemhopp med fallskärm</span>
+  <mat-toolbar-row *ngIf="useDropDown">
+    <!-- <div>
+      <span style="font-size: 16px">Tandemhopp med fallskärm</span>
+    </div> -->
+    <div>
+      <button mat-raised-button color="accent">Boka en tid</button>
+      <button mat-raised-button color="accent" class="action-button">
+        Köp ett hopp
+      </button>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
