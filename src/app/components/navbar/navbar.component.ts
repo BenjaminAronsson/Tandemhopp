@@ -1,3 +1,4 @@
+import { Platform } from "@angular/cdk/platform";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -6,9 +7,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./navbar.component.scss"],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  constructor(platform: Platform) {}
 
-  useDropDown = true;
+  get useDropDown(): boolean {
+    return window.innerWidth < 700;
+  }
 
   links: { link: string; name: string }[] = [
     { name: "Hem", link: "home" },
