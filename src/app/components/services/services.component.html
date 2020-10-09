@@ -1,0 +1,55 @@
+<div class="services" id="services">
+  <div
+    class="parallax_background"
+    data-image-src="assets/images/plate4.jpg"
+  ></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="section_title_container">
+          <div class="section_title">
+            <h1>{{ title }}</h1>
+          </div>
+          <p>{{ subtitle }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row services_row">
+      <div class="col">
+        <div class="section_expander">
+          <!-- Services Slider -->
+          <div class="services_slider_container">
+            <div class="owl-carousel owl-theme services_slider">
+              <!-- Slide -->
+              <!-- <div class="owl-item"> -->
+
+              <!-- Service -->
+              <div
+                *ngFor="let service of services"
+                class="service d-flex flex-row align-items-center justify-content-start trans_200"
+              >
+                <div class="service_icon">
+                  <div>
+                    <img
+                      [src]="service.image"
+                      class="svg"
+                      alt="https://www.flaticon.com/authors/freepik"
+                    />
+                  </div>
+                </div>
+                <div class="service_content">
+                  <div class="service_title trans_200">{{ service.title }}</div>
+                  <div class="service_text trans_200">
+                    <p>
+                      {{ service.text }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

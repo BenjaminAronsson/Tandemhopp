@@ -1,57 +1,48 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button mat-icon-button *ngIf="useDropDown">
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button>
-    <span>Skydive</span>
-    <span class="menu-spacer"></span>
-    <div *ngIf="!useDropDown">
-      <a mat-button *ngFor="let link of links" [routerLink]="'/' + link.link">
-        {{ link.name.toLocaleUpperCase() }}
+<!-- Header -->
+
+<header class="header trans_400">
+  <div
+    class="header_content d-flex flex-row align-items-center justify-content-center trans_400"
+  >
+    <!-- Logo -->
+    <div class="logo">
+      <a href="#">
+        <div>Plate<span>Såg</span></div>
+        <div>& hyvleri</div>
       </a>
     </div>
-    <span class="flexExpand"></span>
-    <div *ngIf="!useDropDown">
-      <button mat-raised-button color="accent" class="action-button">
-        Boka en tid
-      </button>
-      <button mat-raised-button color="accent" class="action-button">
-        Köp ett hopp
-      </button>
+    <div id="navSpacer"></div>
+    <div class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  </mat-toolbar-row>
 
-  <mat-toolbar-row *ngIf="useDropDown">
-    <!-- <div>
-      <span style="font-size: 16px">Tandemhopp med fallskärm</span>
-    </div> -->
-    <div>
-      <button mat-raised-button color="accent">Boka en tid</button>
-      <button mat-raised-button color="accent" class="action-button">
-        Köp ett hopp
-      </button>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+    <!-- Main Navigation -->
+    <nav class="main_nav">
+      <ul class="d-flex flex-row align-items-start justify-content-start">
+        <li *ngFor="let link of links">
+          <a [routerLink]="link.link"
+            >{{ link.title }}
+            <div>
+              <div></div>
+              <div></div>
+              <div></div></div
+          ></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <mat-nav-list *ngIf="useDropDown">
-      <a
-        mat-list-item
-        *ngFor="let link of links"
-        [routerLink]="'/' + link.link"
-      >
-        {{ link.name.toLocaleUpperCase() }}
-      </a>
-      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
-        >STÄNG</a
-      >
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 88vh">
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<!-- Menu -->
+
+<div class="menu" #menu>
+  <nav class="menu_nav">
+    <ul class="d-flex flex-column align-items-start justify-content-start">
+      <li class="active" *ngFor="let link of links">
+        <a [routerLink]="[link.link]">{{ link.title.toLocaleUpperCase() }}</a>
+      </li>
+    </ul>
+  </nav>
+</div>

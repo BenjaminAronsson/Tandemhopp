@@ -23,14 +23,32 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/assets/css/bootstrap-4.1.2/bootstrap.min.css",
+              "src/assets/css/main_styles.css",
+              "src/assets/css/responsive.css",
+              "src/assets/plugins/font-awesome-4.7.0/css/font-awesome.min.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
+              "src/assets/plugins/OwlCarousel2-2.2.1/animate.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/js/jquery-3.2.1.min.js",
+              "src/assets/css/bootstrap-4.1.2/popper.js",
+              "src/assets/css/bootstrap-4.1.2/bootstrap.min.js",
+              "src/assets/plugins/greensock/TweenMax.min.js",
+              "src/assets/plugins/greensock/TimelineMax.min.js",
+              "src/assets/plugins/scrollmagic/ScrollMagic.min.js",
+              "src/assets/plugins/greensock/animation.gsap.min.js",
+              "src/assets/plugins/greensock/ScrollToPlugin.min.js",
+              "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
+              "src/assets/plugins/easing/easing.js",
+              "src/assets/plugins/progressbar/progressbar.min.js",
+              "src/assets/plugins/parallax-js-master/parallax.min.js",
+              "src/assets/plugins/scrollTo/jquery.scrollTo.min.js",
+              "src/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,13 +105,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -105,9 +118,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -123,6 +134,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "tandemhopp"
 }

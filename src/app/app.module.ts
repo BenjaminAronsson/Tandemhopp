@@ -14,6 +14,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
+import { FooterComponent } from './components/footer/footer.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { MatButtonModule } from "@angular/material/button";
     HomeComponent,
     BookingComponent,
     NavbarComponent,
+    FooterComponent,
+    SliderComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,

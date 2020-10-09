@@ -1,8 +1,5 @@
-<!-- <div style="background-image: url('../assets/images/plane.jpg'); height: 100vh"> -->
-<!-- Toolbar -->
-<app-navbar></app-navbar>
-
-<!-- Content -->
-<div class="content container" role="main">
+<div class="super_container" id="top">
+  <app-navbar [links]="links"></app-navbar>
   <router-outlet></router-outlet>
+  <app-footer [company]="company"></app-footer>
 </div>

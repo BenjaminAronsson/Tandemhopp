@@ -1,0 +1,162 @@
+<footer class="footer">
+  <div
+    class="parallax_background"
+    data-image-src="assets/images/woodFloor2.jpg"
+  ></div>
+  <!-- <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"></div> -->
+  <div class="footer_container">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="section_title_container">
+            <div class="section_title">
+              <h1>kom i kontakt med oss</h1>
+            </div>
+            <p>Inga uppdrag är för stora.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row footer_row">
+        <div class="col-lg-4 footer_col">
+          <div class="contact_info">
+            <div class="footer_title">Kontakt information</div>
+            <div class="contact_info_list">
+              <ul>
+                <li
+                  class="d-flex flex-row align-items-start justify-content-start"
+                >
+                  <div>
+                    <div class="contact_info_icon">
+                      <img
+                        src="assets/icons/face.svg"
+                        alt="https://www.flaticon.com/authors/freepik"
+                      />
+                    </div>
+                  </div>
+                  <div class="contact_info_content">
+                    <a href="http://maps.google.com/?q={{ company.adress }}">{{
+                      company.adress
+                    }}</a>
+                  </div>
+                </li>
+                <li
+                  class="d-flex flex-row align-items-center justify-content-start"
+                >
+                  <div>
+                    <div class="contact_info_icon">
+                      <img
+                        src="assets/icons/phone-call.svg"
+                        alt="https://www.flaticon.com/authors/freepik"
+                      />
+                    </div>
+                  </div>
+                  <div class="contact_info_content">
+                    <a href="tel:{{ company.phone }}">{{ company.phone }}</a>
+                  </div>
+                </li>
+                <li
+                  class="d-flex flex-row align-items-center justify-content-start"
+                >
+                  <div>
+                    <div class="contact_info_icon">
+                      <img
+                        src="assets/icons/phone-call.svg"
+                        alt="https://www.flaticon.com/authors/freepik"
+                      />
+                    </div>
+                  </div>
+                  <div class="contact_info_content">
+                    <a href="tel:{{ company.phone }}">{{ company.mobile }}</a>
+                  </div>
+                </li>
+                <li
+                  class="d-flex flex-row align-items-center justify-content-start"
+                >
+                  <div>
+                    <div class="contact_info_icon">
+                      <img
+                        src="assets/icons/email.svg"
+                        alt="https://www.flaticon.com/authors/freepik"
+                      />
+                    </div>
+                  </div>
+                  <div class="contact_info_content">
+                    <a href="mailto:{{ company.email }}" style="color: white">{{
+                      company.email
+                    }}</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="social">
+              <ul
+                class="d-flex flex-row align-items-center justify-content-start"
+              >
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="footer_title">Hör av dig</div>
+          <div class="contact_form_container">
+            <form
+              action="contact.php"
+              role="form"
+              method="post"
+              id="contact_form"
+              class="contact_form"
+            >
+              <div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <input
+                      type="text"
+                      placeholder="Namn"
+                      class="contact_input"
+                      required="required"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <input
+                      type="email"
+                      placeholder="E-mail"
+                      class="contact_input"
+                      required="required"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <input type="text" placeholder="Ämne" class="contact_input" />
+              </div>
+              <div>
+                <textarea
+                  class="contact_input contact_textarea"
+                  placeholder="Meddelande"
+                  required="required"
+                ></textarea>
+              </div>
+              <button class="contact_form_button" type="submit">
+                Skicka meddelande
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="footer_bar d-flex flex-row align-items-center justify-content-start"
+  >
+    <div class="copyright" style="color: #ffffff">
+      {{ company.companyName }}
+
+      <br /><br />Copyright &copy; {{ year }}
+    </div>
+  </div>
+</footer>

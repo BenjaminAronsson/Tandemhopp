@@ -1,5 +1,6 @@
 import { Platform } from "@angular/cdk/platform";
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { NavLink } from "src/app/models/navLink";
 
 @Component({
   selector: "app-navbar",
@@ -13,14 +14,11 @@ export class NavbarComponent implements OnInit {
     return window.innerWidth < 700;
   }
 
-  links: { link: string; name: string }[] = [
-    { name: "Hem", link: "home" },
-    { name: "Boka tid", link: "book" },
-    { name: "presentkort", link: "giftcard" },
-    { name: "pris", link: "price" },
-    { name: "Om", link: "about" },
-    { name: "Kontakt", link: "contact" },
-  ];
+  @Input() links: NavLink[] = [];
 
   ngOnInit(): void {}
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
+  }
 }
