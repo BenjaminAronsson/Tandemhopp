@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { serviceViewModel } from "src/app/models/serviceViewModel";
+import { sliderViewModel } from "src/app/models/sliderViewModel";
 
 @Component({
   selector: "app-home",
@@ -10,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   services: serviceViewModel[];
+  slides: sliderViewModel[];
   title = "Våra produkter";
   subtitle = "Vi inriktar oss på lego hyvling åt företag.";
 
@@ -25,6 +27,18 @@ export class HomeComponent implements OnInit {
         title: "Biprodukter",
         text: "utterspån & klyvspån.",
         image: "assets/icons/treeIcon.svg",
+      },
+    ];
+
+    this.slides = [
+      {
+        title1: "Vi har",
+        title2: "virket",
+        title3: "som du",
+        title4: "behöver",
+        text:
+          "Med fyra generationers erfarenhet och egen energi direkt från Ätran.",
+        image: "assets/images/plate1.jpg",
       },
     ];
   }

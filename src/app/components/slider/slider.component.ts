@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
+import { sliderViewModel } from "src/app/models/sliderViewModel";
 
 @Component({
-  selector: 'app-slider',
-  templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.scss']
+  selector: "app-slider",
+  templateUrl: "./slider.component.html",
+  styleUrls: ["./slider.component.scss"],
 })
 export class SliderComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  @Input() slides: sliderViewModel[] = [];
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
