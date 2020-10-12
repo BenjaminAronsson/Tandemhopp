@@ -7,8 +7,8 @@
     <!-- Logo -->
     <div class="logo">
       <a href="#">
-        <div>Plate<span>Såg</span></div>
-        <div>& hyvleri</div>
+        <div>Sky<span>Dive</span></div>
+        <div>Tandemhopp med fallskärm</div>
       </a>
     </div>
     <div id="navSpacer"></div>
@@ -23,7 +23,7 @@
       <ul class="d-flex flex-row align-items-start justify-content-start">
         <li *ngFor="let link of links">
           <a [routerLink]="link.link"
-            >{{ link.title }}
+            >{{ link.title.toLocaleUpperCase() }}
             <div>
               <div></div>
               <div></div>

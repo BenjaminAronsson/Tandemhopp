@@ -10,7 +10,7 @@ export class ServicesComponent implements OnInit {
   @Input() services: serviceViewModel[];
   @Input() title = "title";
   @Input() subtitle = "Subtitle";
-  @Input() backgroundImage = "assets/images/plate4.jpg";
+  @Input() backgroundImage = "assets/images/tandemhopp/flying.jpg";
 
   constructor() {}
 
