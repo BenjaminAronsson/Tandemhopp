@@ -23,6 +23,7 @@
             <div class="contact_info_list">
               <ul>
                 <li
+                  *ngIf="company.adress"
                   class="d-flex flex-row align-items-start justify-content-start"
                 >
                   <div>
@@ -34,12 +35,15 @@
                     </div>
                   </div>
                   <div class="contact_info_content">
-                    <a href="http://maps.google.com/?q={{ company.adress }}">{{
-                      company.adress
-                    }}</a>
+                    <a
+                      href="http://maps.google.com/?q={{ company.adress }}"
+                      target="_blank"
+                      >{{ company.adress }}</a
+                    >
                   </div>
                 </li>
                 <li
+                  *ngIf="company.email"
                   class="d-flex flex-row align-items-center justify-content-start"
                 >
                   <div>
@@ -55,6 +59,7 @@
                   </div>
                 </li>
                 <li
+                  *ngIf="company.mobile"
                   class="d-flex flex-row align-items-center justify-content-start"
                 >
                   <div>
@@ -66,10 +71,11 @@
                     </div>
                   </div>
                   <div class="contact_info_content">
-                    <a href="tel:{{ company.phone }}">{{ company.mobile }}</a>
+                    <a href="tel:{{ company.mobile }}">{{ company.mobile }}</a>
                   </div>
                 </li>
                 <li
+                  *ngIf="company.email"
                   class="d-flex flex-row align-items-center justify-content-start"
                 >
                   <div>
@@ -105,7 +111,7 @@
           <div class="footer_title">Hör av dig</div>
           <div class="contact_form_container">
             <form
-              action="contact.php"
+              onsubmit="onSubmit"
               role="form"
               method="post"
               id="contact_form"
@@ -119,6 +125,7 @@
                       placeholder="Namn"
                       class="contact_input"
                       required="required"
+                      [value]="model.name"
                     />
                   </div>
                   <div class="col-lg-6">
@@ -127,18 +134,25 @@
                       placeholder="E-mail"
                       class="contact_input"
                       required="required"
+                      [value]="model.email"
                     />
                   </div>
                 </div>
               </div>
               <div>
-                <input type="text" placeholder="Ämne" class="contact_input" />
+                <input
+                  [value]="model.subject"
+                  type="text"
+                  placeholder="Ämne"
+                  class="contact_input"
+                />
               </div>
               <div>
                 <textarea
                   class="contact_input contact_textarea"
                   placeholder="Meddelande"
                   required="required"
+                  [value]="model.message"
                 ></textarea>
               </div>
               <button class="contact_form_button" type="submit">
@@ -153,7 +167,7 @@
   <div
     class="footer_bar d-flex flex-row align-items-center justify-content-start"
   >
-    <div class="copyright" style="color: #ffffff">
+    <div class="copyright" style="color: #ffffff; font-size: large">
       {{ company.companyName }}
 
       <br /><br />Copyright &copy; {{ year }}

@@ -19,11 +19,11 @@ export class AppComponent {
 
   constructor() {
     this.company = {
-      companyName: "Plate Såg & Hyvleri AB",
-      adress: "Plate 102 52392 TIMMELE",
-      phone: "032-132-410",
-      mobile: "0708-63 54 27",
-      email: "info@platesagohyvleri.se",
+      companyName: "Skydive Sweden AB",
+      adress: "Vårgårda Flygplats, 447 91 Vårgårda",
+      phone: "020-12 15 18",
+      mobile: null,
+      email: "info@tandemhopp.se",
     };
 
     this.title = this.company.companyName;

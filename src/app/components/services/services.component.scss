@@ -1,3 +1,14 @@
+@import "../../../styles.scss";
+
+.service {
+  background-color: $accent--color;
+  border-radius: 10px;
+}
+
+.service-title {
+  color: #fff;
+}
+
 svg,
 path {
   fill: inherit !important;

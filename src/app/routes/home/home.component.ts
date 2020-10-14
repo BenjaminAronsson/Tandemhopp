@@ -32,10 +32,10 @@ export class HomeComponent implements OnInit {
 
     this.slides = [
       {
-        title1: "Häng med oss på fritt fall i",
-        title2: "200",
-        title3: "km/h!",
-        title4: "",
+        title1: "Häng med oss upp i luften,",
+        title2: "",
+        title3: " fritt fall i ",
+        title4: "200 km/h!",
         text:
           "Med fyra generationers erfarenhet och egen energi direkt från Ätran.",
         image: "assets/images/tandemhopp/chopper.jpg",

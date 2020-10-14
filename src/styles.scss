@@ -24,7 +24,17 @@ $tandemhopp-theme: mat-light-theme(
   $tandemhopp-warn
 );
 
-$primary--color; rgb(15, 167, 83);
+//$primary--color: rgb(15, 167, 83);
+$primary--color: rgb(216, 64, 4);
+$accent--color: rgb(4, 96, 216);
+
+@function set-button-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
