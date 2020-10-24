@@ -33,7 +33,7 @@ export class AppComponent {
       { title: "Boka tid", link: "book" },
       { title: "presentkort", link: "giftcard" },
       { title: "pris", link: "price" },
-      { title: "Om", link: "about" },
+      { title: "Information", link: "info" },
       { title: "Kontakt", link: "contact" },
     ];
   }

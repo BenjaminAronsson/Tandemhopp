@@ -1,8 +1,8 @@
 <!-- Home -->
 
-<div class="home">
+<div class="home" id="home">
   <!-- Home Slider -->
-  <app-slider [slides]="slides"></app-slider>
+  <app-slider (click)="scroll('book')" [slides]="slides"></app-slider>
 </div>
 
 <!-- Services -->
@@ -11,3 +11,206 @@
   [title]="title"
   [subtitle]="subtitle"
 ></app-services>
+
+<!-- Info -->
+<app-container id="info">
+  <div class="content_text_repeat"><h1>Inför ditt tandemhopp</h1>
+    <div class="bread_2">
+    
+    <b>Här är lite information som är bra att veta inför ditt hopp. </b><br><br>
+    
+    <span class="rubrik">Tid</span><br>
+    Hur lång tid ett fallskärmshopp tar beror på flera olika saker: hur många som hoppar samma tid som dig, väder, när planet lyfter och landar och hur lång tid introduktionen tar. Räkna med att det tar 1,5 timme från ankomsttid tills att du står med diplomet i handen.<br>
+    <br>
+    
+    <span class="rubrik">Väder</span><br>
+    Om det inte går att hoppa så ringer vi dig och meddelar det någon timma innan du ska hoppa. Har du lång resväg kan du ringa oss innan du åker. Du når hoppfälten på 0322-62&nbsp;18&nbsp;88 (Vårgårda) respektive 0526-17&nbsp;08&nbsp;97 (Strömstad/Näsinge).
+    Eftersom väder är lokalt och varierar så måste bedömning om ditt hopp går att genomföra ofta göras på hoppfältet. Det får blåsa högst 11 m/s och det måste synas blå himmel mellan molnen. Ett högt liggande molntäcke brukar oftast inte vara något hinder.<br>
+    <br>
+    
+    <span class="rubrik">Checklista innan du åker hemifrån</span>
+    <ul>
+    <li><b>Ta med bokningsbekräftelsen</b><br>
+    Den innehåller all information som du behöver och det är bra att ha den med om det skulle bli något problem med våra datorer. Du måste dock inte skriva ut den utan det räcker att ha den i mobilen.</li><br>
+    
+    <li><b>Välj friluftskläder</b><br>
+    Välj kläder som om du skulle gå en dag i skog och mark. Har du ont av kyla är det klokt att ta med en extra tröja. På fötterna är det lämpligt med vanliga träningsskor eller liknande. Overall, handskar, hjälm och skyddsglasögon får du låna av oss. Använder du glasögon så har vi lite större skyddsglasögon för dig.</li><br>
+    
+    <li><b>Kom i tid</b><br>
+    Den tid du är bokad är den tid vi vill att du skall vara på hoppfältet. Vi har bokade tider under hela dagen. Kommer du för sent hinner vi inte hoppa med dig innan det är dags för nästa person. Om du blir försenad så ring till hoppfältet. (se ovan)</li><br>
+    
+    <li><b>Ta gärna med dina vänner</b><br>
+    Vänner och familj får gärna följa med och titta! På Vårgårda flygplats har vi både fika och mat till försäljning. Jättegott och till bra priser.</li>
+    
+    <li><b>Ingen alkohol</b><br>
+    För din och andras säkerhet gäller nolltolerans för alkohol för alla som vistas på hoppfältet. Och det gäller även efter hoppet.</li><br>
+    
+    </ul>
+    
+    <br>
+    &nbsp;
+    
+    <!-- HOPPBART -->
+    <br style="clear:both">
+    <hr>
+    <br>
+    <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/hoppbart" data-width="480" data-height="640" data-hide-cover="false" data-show-facepile="true" data-show-posts="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=435&amp;height=640&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fhoppbart&amp;locale=sv_SE&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;width=480"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f19d62ee994ae84" width="480px" height="640px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.3/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df5fc0110fc33fc%26domain%3Dwww.tandemhopp.se%26origin%3Dhttp%253A%252F%252Fwww.tandemhopp.se%252Ff28e06e34cd2884%26relation%3Dparent.parent&amp;container_width=435&amp;height=640&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fhoppbart&amp;locale=sv_SE&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;width=480" style="border: none; visibility: visible; width: 0px; height: 0px;" class=""></iframe></span></div>
+    </div>
+    </div>
+</app-container>
+
+<!-- Boka tid -->
+<app-container #book id="book">
+  <div class="content_text_repeat">
+    <h1> tid för tandemhopp</h1>
+    <div class="bread_2">
+    
+    <b>Tiden du bokar avser ankomst till receptionen.</b> Vi börjar med att checka in dig sedan följer briefing och påklädning innan du och din instruktör är redo att klättra in i flygplanet för att hoppa. Hoppet sker normalt 45&nbsp;-&nbsp;90 minuter efter ankomst, men det kan ta längre tid och väntetid förekommer så räkna med att hela äventyret tar upp till två timmar om du planerar för någon aktivitet efteråt.<br>
+    <br>
+    <b>Betalning sker direkt vid bokningen.</b> Antingen med kontokort eller med presentkort. <b>Värdekoden</b> på presentkortet skall skrivas in med stora bokstäver utan specialtecken och mellanslag. <b>#&nbsp;P&nbsp;12345&nbsp;ABC&nbsp;#</b> skall alltså skrivas in som <b>P12345ABC</b><br>
+    <br>
+    <br>
+    <strong><a href="https://bookings.burblesoft.eu/3373/18?lang=swedish" target="_blank">Boka tid på Vårgårda&nbsp;flygplats</a></strong><br>
+     - Vår alldeles egna flygplats 70&nbsp;km från Göteborg.<br>
+    <br>
+    <strong><a href="https://bookings.burblesoft.eu/3373/35?lang=swedish" target="_blank">Boka tid på Strömstad/Näsinge&nbsp;flygplats</a></strong><br>
+     - Vårt sommarställe vid kusten och norska gränsen där vi hoppar tre veckor i juli varje år.<br>
+    <br>
+    <strong><a href="https://bookings.burblesoft.eu/3373/25?lang=swedish" target="_blank">Boka tid på Skövde&nbsp;flygplats</a></strong><br>
+     - Hoppning under Kristi himmelsfärds helg varje år.<br>
+    <br>
+    <br>
+    <b>Vädret bedöms på plats när det är dags att hoppa.</b> Det får inte blåsa mer än 11&nbsp;m/s och det måste finnas luckor mellan molnen. Sätter vädret stopp försöker vi kontakta dig ett par timmar innan. Drygt åtta av tio bokade hopp går att utföra. Går det inte att utföra ditt hopp sker ingen återbetalning utan du får boka en ny tid. Oftast finns det lediga tider redan efterföljande helg.<br>
+    <br>
+    <br>
+    <span class="rubrik">Ombokning</span><br>
+    <br>
+    När du gjorde din första bokning skapades ett konto i bokningssystemet kopplad till din e-post. För att göra en ny bokning måste du göra det från ditt konto.<br>
+    <br>
+    1. Hämta ett lösenord till kontot. Lösenordet skickas till din e-post. <a href="https://bookings.burblesoft.com/jumper/forgot_password" target="_blank">KLICKA HÄR</a><br>
+    <br>
+    2. Logga in på ditt konto och gör en ny bokning. <a href="https://bookings.burblesoft.com/jumper/auth/3373" target="_blank">KLICKA HÄR</a><br>
+    <br>
+    Får du problem så skicka ett meddelande till <a href="mailto:info@tandemhopp.se">info@tandemhopp.se</a> och ange när du vill hoppa så ordnar vi det.<br>
+    <br>
+    <br>
+    
+    
+    <!-- FACEBOOK -->
+    <br style="clear:both">
+    <hr>
+    <br>
+    <div class="fb-like fb_iframe_widget" data-href="https://facebook.com/Tandemhopp" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f1c640e5bd5d508" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.3/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df52c83c84c2b88%26domain%3Dwww.tandemhopp.se%26origin%3Dhttp%253A%252F%252Fwww.tandemhopp.se%252Ff91fc58e282858%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
+    
+    </div>
+    </div>
+</app-container>
+
+<!-- Presentkort -->
+<app-container id="giftcard">
+  <div class="content_text_repeat">
+    <h1>Ett presentkort fyllt med glädje, äventyr och minnen!</h1>
+    <div class="bread_2">
+    
+    <p>Tandemhopp kan vara den perfekta presenten. Ett nervkittlande helt unikt äventyr som inte lämnar någon oberörd och som blir ihågkommet länge. Och du, upplevelser man delar blir större så köp ett hopp till dig själv också och hoppa tillsammans.</p>
+    
+    <p><b>Köp presentkort</b> genom att betala till Swish nr&nbsp;123&nbsp;188&nbsp;52&nbsp;43 och ange din e-postadress som meddelande. Du kan även betala till bankgiro 5307-2161. Leveransen hanteras manuellt så det kan dröja en till två dagar innan presentkortet kommer med e-post. Presentkortet gäller på alla våra tre hoppfält; Vårgårda, Skövde och Strömstad.</p>
+    
+    <p><b>Fotografering och/eller filmning</b> rekommenderar vi starkt att man väljer till. Antingen kan du inkludera det i presentkortet eller så kan mottagaren själv lägga till det när hoppet bokas.</p>
+    
+    <p>Observera att nästa säsong, 2021, kommer vi att höja priset de dagar då efterfrågan är som störst. Det gäller främst lördagar. För att boka in sig de dagarna får man betala mellanskillnaden.</p>
+    
+    <p>Har du fått ett presentkort som du inte hunnit utnyttja så kan du förlänga giltighetstiden 12 månader genom att swisha 300&nbsp;kr till nr&nbsp;123&nbsp;188&nbsp;52&nbsp;43 och ange värdekoden samt din e-postadress som meddelande. Förlängningen görs manuellt och vi meddelar dig när det är klart efter ett par dagar.</p>
+    
+    <span class="rubrik">Köpvillkor</span><br>
+    
+    <ul style="margin-left: 15px;">
+        <li>Presentkortet är giltigt till och med 31 mars 2022.</li>
+        <li>Presentkortet är inte personligt utan kan användas av vem som helst.</li>
+        <li>Presentkortet har en värdekod som måste anges både vid bokningen och när hoppet skall genomföras. Förvara koden så att den inte kommer i orätta händer.</li>
+        <li>Förlorade presentkort ersätts inte. Vid eventuell förlust kan värdekoden dock spärras och ändras.</li>
+        <li>Köp av presentkort omfattas inte av distansköplagen och du har därför ingen ångervecka eller öppet köp.</li>
+        <li>Presentkort återlöses inte mot kontanter.</li>
+    </ul>
+    
+    
+    <br>
+    <br>
+    <!-- FACEBOOK -->
+    <br style="clear:both">
+    <hr>
+    <br>
+    <div class="fb-like fb_iframe_widget fb_iframe_widget_fluid" data-href="https://facebook.com/Tandemhopp" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f358f7f85cb3438" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.3/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Dfd57591cfbc7c%26domain%3Dwww.tandemhopp.se%26origin%3Dhttp%253A%252F%252Fwww.tandemhopp.se%252Ff37bf8bbca71934%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
+    
+    
+    
+    </div>
+    </div>
+</app-container>
+
+<!-- Pris -->
+<app-container id="price">
+  <div id="maincontent_repeat">
+    <div class="content_text_repeat"><h1>Pris</h1><br><br>
+    
+    <div class="bread_2">
+    <table width="360" border="0" cellspacing="0" cellpadding="0">
+    <tbody><tr>
+    <td><b>Tandemhopp</b><br>
+    &nbsp;</td>
+    <td valign="top">2&nbsp;990&nbsp;SEK</td>
+    </tr>
+    <tr>
+    <td><b>Tandemhopp med handkamera</b><br>
+    &nbsp;</td>
+    <td valign="top">3&nbsp;990&nbsp;SEK</td>
+    </tr>
+    <tr>
+    <td><b>Tandemhopp med fotografering</b><br>
+    &nbsp;</td>
+    <td valign="top">3&nbsp;980&nbsp;SEK</td>
+    </tr>
+    <tr>
+    <td><b>Tandemhopp med filmning</b><br>
+    &nbsp;</td>
+    <td valign="top">4&nbsp;080&nbsp;SEK</td>
+    </tr>
+    <tr>
+    <td><b>Tandemhopp med fotografering och filmning</b><br>
+    &nbsp;</td>
+    <td valign="top">4&nbsp;380&nbsp;SEK</td>
+    </tr>
+    </tbody></table>
+    <br>
+    
+    <span class="rubrik">Fotografering och filmning av hoppet</span><br>
+    Genom att låta en av våra duktiga fotografer föreviga hoppet får du ett minne för livet med dig hem.<br>
+    <strong>Handkamera</strong> innebär att instruktören har en filmkamera på handen. Det ger ett "selfie"-perspektiv av hela hoppet, perfekt för sociala medier.<br>
+    <strong>Fotografering</strong> innebär att du får cirka 30 högupplösta foton som du kan ha som profilbild, beställa förstoringar av, skicka till dina vänner eller ha som skärmsläckare på datorn.<br>
+    <strong>Filmning</strong> ger dig en cirka fyra minuter lång redigerad film av ditt hopp med pålagd musik.<br>
+    <br>
+    Vår rekommendation är att du väljer både foto och film eller handkamera.<br>
+    <br>
+    Materialet skickas till dig som en länk där du laddar ner materialet till datorn. Oftast hinner vi färdigställa materialet samma dag, men när vi är fullbokade kan det dröja någon dag extra.<br>
+    <br>
+    Fotografering och filmning bör bokas och betalas när du bokar tid för tandemhoppet så att vi kan boka in fotografer, men kan i mån av tillgång köpas till när du hoppar.<br>
+    <br>
+    Av hänsyn till säkerheten är det inte tillåtet att ta med egen kamera eller andra föremål in i planet eller under hoppet.<br>
+    <br>
+    
+    <span class="rubrik">Hoppa billigare tillsammans med kompisarna</span><br>
+    Om du får med dig minst fem kompisar så blir det lite billigare. Hur mycket billigare beror på hur många ni är och vilken dag ni vill hoppa. Kontakta oss innan ni bokar så berättar vi mer och hjälper er med bokningen.<br>
+    <br>
+    
+    <!-- FACEBOOK -->
+    <br style="clear:both">
+    <hr>
+    <br>
+    <div class="fb-like fb_iframe_widget" data-href="https://facebook.com/Tandemhopp" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f64e10582cf894" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.3/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df2ef82d11e782e8%26domain%3Dwww.tandemhopp.se%26origin%3Dhttp%253A%252F%252Fwww.tandemhopp.se%252Ff4a05425f2f8f4%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
+    
+    </div>
+    </div>
+    </div>
+</app-container>
+
+

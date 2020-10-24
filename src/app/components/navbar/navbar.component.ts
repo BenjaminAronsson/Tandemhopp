@@ -1,4 +1,5 @@
 import { Platform } from "@angular/cdk/platform";
+import { ViewportScroller } from "@angular/common";
 import { Component, Input, OnInit } from "@angular/core";
 import { NavLink } from "src/app/models/navLink";
 
@@ -8,7 +9,7 @@ import { NavLink } from "src/app/models/navLink";
   styleUrls: ["./navbar.component.scss"],
 })
 export class NavbarComponent implements OnInit {
-  constructor(platform: Platform) {}
+  constructor(private controller: ViewportScroller) {}
 
   get useDropDown(): boolean {
     return window.innerWidth < 700;
@@ -18,7 +19,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
+  scroll(elementId: string) {
+    this.controller.scrollToAnchor(elementId);
   }
 }

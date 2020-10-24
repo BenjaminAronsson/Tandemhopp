@@ -17,6 +17,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { FooterComponent } from "./components/footer/footer.component";
 import { SliderComponent } from "./components/slider/slider.component";
 import { ServicesComponent } from "./components/services/services.component";
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { ServicesComponent } from "./components/services/services.component";
     FooterComponent,
     SliderComponent,
     ServicesComponent,
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { ServicesComponent } from "./components/services/services.component";
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
