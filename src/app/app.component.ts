@@ -30,10 +30,10 @@ export class AppComponent {
 
     this.links = [
       { title: "Hem", link: "home" },
+      { title: "Information", link: "info" },
       { title: "Boka tid", link: "book" },
       { title: "presentkort", link: "giftcard" },
       { title: "pris", link: "price" },
-      { title: "Information", link: "info" },
       { title: "Kontakt", link: "contact" },
     ];
   }

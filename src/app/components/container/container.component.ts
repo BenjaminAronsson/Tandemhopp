@@ -10,6 +10,7 @@ import { ContainerViewModel } from "src/app/models/ContainerViewModel";
 export class ContainerComponent implements OnInit {
   @Input() title = "";
   @Input() subtitle = "";
+  @Input() image = "";
 
   constructor() {}
 

@@ -1,9 +1,5 @@
 import { ViewportScroller } from "@angular/common";
 import { Component, Input, OnInit } from "@angular/core";
-import {
-  ContainerViewModel,
-  ContianerMode,
-} from "src/app/models/ContainerViewModel";
 import { serviceViewModel } from "src/app/models/serviceViewModel";
 import { sliderViewModel } from "src/app/models/sliderViewModel";
 
@@ -17,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   services: serviceViewModel[];
   slides: sliderViewModel[];
-  title = "Inför ditt tandemhopp";
+  title = "Så går tandemhoppet till";
   subtitle = "Checklista innan du åker hemifrån";
 
   scroll(elementId: string) {
