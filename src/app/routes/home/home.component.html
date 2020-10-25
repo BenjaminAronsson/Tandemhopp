@@ -5,9 +5,6 @@
   <app-slider (click)="scroll('book')" [slides]="slides"></app-slider>
 </div>
 
-<!-- Info -->
-<app-split-view> </app-split-view>
-
 <!-- Services -->
 <app-services
   [services]="services"
@@ -16,7 +13,7 @@
 ></app-services>
 
 <!-- Info -->
-<app-container id="info" image="assets/images/tandemhopp/island.jpg">
+<app-split-view id="info" image="assets/images/tandemhopp/island.jpg" [color]="bacgrkoundColor">
   <div class="content_text_repeat"><h1>Inför ditt tandemhopp</h1>
     <div class="bread_2">
     
@@ -59,58 +56,48 @@
     <br>
     <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/hoppbart" data-width="480" data-height="640" data-hide-cover="false" data-show-facepile="true" data-show-posts="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=435&amp;height=640&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fhoppbart&amp;locale=sv_SE&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;width=480"><span style="vertical-align: bottom; width: 0px; height: 0px;"><iframe name="f19d62ee994ae84" width="480px" height="640px" data-testid="fb:page Facebook Social Plugin" title="fb:page Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.3/plugins/page.php?app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df5fc0110fc33fc%26domain%3Dwww.tandemhopp.se%26origin%3Dhttp%253A%252F%252Fwww.tandemhopp.se%252Ff28e06e34cd2884%26relation%3Dparent.parent&amp;container_width=435&amp;height=640&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fhoppbart&amp;locale=sv_SE&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=true&amp;width=480" style="border: none; visibility: visible; width: 0px; height: 0px;" class=""></iframe></span></div>
     </div>
-    </div>
-</app-container>
+  </div>
+</app-split-view>
 
 <!-- Boka tid -->
-<app-container #book id="book" image="assets/images/tandemhopp/3flight.jpg">
+<app-split-view #book id="book" image="assets/images/tandemhopp/3flight.jpg" [color]="bacgrkoundColor2" reverse="true">
   <div class="content_text_repeat">
     <h1> tid för tandemhopp</h1>
     <div class="bread_2">
-    
-    <b>Tiden du bokar avser ankomst till receptionen.</b> Vi börjar med att checka in dig sedan följer briefing och påklädning innan du och din instruktör är redo att klättra in i flygplanet för att hoppa. Hoppet sker normalt 45&nbsp;-&nbsp;90 minuter efter ankomst, men det kan ta längre tid och väntetid förekommer så räkna med att hela äventyret tar upp till två timmar om du planerar för någon aktivitet efteråt.<br>
-    <br>
-    <b>Betalning sker direkt vid bokningen.</b> Antingen med kontokort eller med presentkort. <b>Värdekoden</b> på presentkortet skall skrivas in med stora bokstäver utan specialtecken och mellanslag. <b>#&nbsp;P&nbsp;12345&nbsp;ABC&nbsp;#</b> skall alltså skrivas in som <b>P12345ABC</b><br>
-    <br>
-    <br>
-    <strong><a href="https://bookings.burblesoft.eu/3373/18?lang=swedish" target="_blank">Boka tid på Vårgårda&nbsp;flygplats</a></strong><br>
-     - Vår alldeles egna flygplats 70&nbsp;km från Göteborg.<br>
-    <br>
-    <strong><a href="https://bookings.burblesoft.eu/3373/35?lang=swedish" target="_blank">Boka tid på Strömstad/Näsinge&nbsp;flygplats</a></strong><br>
-     - Vårt sommarställe vid kusten och norska gränsen där vi hoppar tre veckor i juli varje år.<br>
-    <br>
-    <strong><a href="https://bookings.burblesoft.eu/3373/25?lang=swedish" target="_blank">Boka tid på Skövde&nbsp;flygplats</a></strong><br>
-     - Hoppning under Kristi himmelsfärds helg varje år.<br>
-    <br>
-    <br>
-    <b>Vädret bedöms på plats när det är dags att hoppa.</b> Det får inte blåsa mer än 11&nbsp;m/s och det måste finnas luckor mellan molnen. Sätter vädret stopp försöker vi kontakta dig ett par timmar innan. Drygt åtta av tio bokade hopp går att utföra. Går det inte att utföra ditt hopp sker ingen återbetalning utan du får boka en ny tid. Oftast finns det lediga tider redan efterföljande helg.<br>
-    <br>
-    <br>
-    <span class="rubrik">Ombokning</span><br>
-    <br>
-    När du gjorde din första bokning skapades ett konto i bokningssystemet kopplad till din e-post. För att göra en ny bokning måste du göra det från ditt konto.<br>
-    <br>
-    1. Hämta ett lösenord till kontot. Lösenordet skickas till din e-post. <a href="https://bookings.burblesoft.com/jumper/forgot_password" target="_blank">KLICKA HÄR</a><br>
-    <br>
-    2. Logga in på ditt konto och gör en ny bokning. <a href="https://bookings.burblesoft.com/jumper/auth/3373" target="_blank">KLICKA HÄR</a><br>
-    <br>
-    Får du problem så skicka ett meddelande till <a href="mailto:info@tandemhopp.se">info@tandemhopp.se</a> och ange när du vill hoppa så ordnar vi det.<br>
-    <br>
-    <br>
-    
-    
-    <!-- FACEBOOK -->
-    <br style="clear:both">
-    <hr>
-    <br>
-    <div class="fb-like fb_iframe_widget" data-href="https://facebook.com/Tandemhopp" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f1c640e5bd5d508" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.3/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df52c83c84c2b88%26domain%3Dwww.tandemhopp.se%26origin%3Dhttp%253A%252F%252Fwww.tandemhopp.se%252Ff91fc58e282858%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=435&amp;href=https%3A%2F%2Ffacebook.com%2FTandemhopp&amp;layout=standard&amp;locale=sv_SE&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
-    
+      <b>Tiden du bokar avser ankomst till receptionen.</b> Vi börjar med att checka in dig sedan följer briefing och påklädning innan du och din instruktör är redo att klättra in i flygplanet för att hoppa. Hoppet sker normalt 45&nbsp;-&nbsp;90 minuter efter ankomst, men det kan ta längre tid och väntetid förekommer så räkna med att hela äventyret tar upp till två timmar om du planerar för någon aktivitet efteråt.<br>
+      <br>
+      <b>Betalning sker direkt vid bokningen.</b> Antingen med kontokort eller med presentkort. <b>Värdekoden</b> på presentkortet skall skrivas in med stora bokstäver utan specialtecken och mellanslag. <b>#&nbsp;P&nbsp;12345&nbsp;ABC&nbsp;#</b> skall alltså skrivas in som <b>P12345ABC</b><br>
+      <br>
+      <br>
+      <strong><a href="https://bookings.burblesoft.eu/3373/18?lang=swedish" target="_blank">Boka tid på Vårgårda&nbsp;flygplats</a></strong><br>
+      - Vår alldeles egna flygplats 70&nbsp;km från Göteborg.<br>
+      <br>
+      <strong><a href="https://bookings.burblesoft.eu/3373/35?lang=swedish" target="_blank">Boka tid på Strömstad/Näsinge&nbsp;flygplats</a></strong><br>
+      - Vårt sommarställe vid kusten och norska gränsen där vi hoppar tre veckor i juli varje år.<br>
+      <br>
+      <strong><a href="https://bookings.burblesoft.eu/3373/25?lang=swedish" target="_blank">Boka tid på Skövde&nbsp;flygplats</a></strong><br>
+      - Hoppning under Kristi himmelsfärds helg varje år.<br>
+      <br>
+      <br>
+      <b>Vädret bedöms på plats när det är dags att hoppa.</b> Det får inte blåsa mer än 11&nbsp;m/s och det måste finnas luckor mellan molnen. Sätter vädret stopp försöker vi kontakta dig ett par timmar innan. Drygt åtta av tio bokade hopp går att utföra. Går det inte att utföra ditt hopp sker ingen återbetalning utan du får boka en ny tid. Oftast finns det lediga tider redan efterföljande helg.<br>
+      <br>
+      <span class="rubrik"><b>Ombokning</b></span><br>
+      <br>
+      När du gjorde din första bokning skapades ett konto i bokningssystemet kopplad till din e-post. För att göra en ny bokning måste du göra det från ditt konto.<br>
+      <br>
+      1. Hämta ett lösenord till kontot. Lösenordet skickas till din e-post. <a href="https://bookings.burblesoft.com/jumper/forgot_password" target="_blank">KLICKA HÄR</a><br>
+      <br>
+      2. Logga in på ditt konto och gör en ny bokning. <a href="https://bookings.burblesoft.com/jumper/auth/3373" target="_blank">KLICKA HÄR</a><br>
+      <br>
+      Får du problem så skicka ett meddelande till <a href="mailto:info@tandemhopp.se">info@tandemhopp.se</a> och ange när du vill hoppa så ordnar vi det.<br>
+      <br>
+      <br>
     </div>
-    </div>
-</app-container>
+  </div>
+</app-split-view>
 
 <!-- Presentkort -->
-<app-container id="giftcard" image="assets/images/tandemhopp/palm.jpg">
+<app-split-view id="giftcard" image="assets/images/tandemhopp/palm.jpg" [color]="bacgrkoundColor">
   <div class="content_text_repeat">
     <h1>Ett presentkort fyllt med glädje, äventyr och minnen!</h1>
     <div class="bread_2">
@@ -149,10 +136,10 @@
     
     </div>
     </div>
-</app-container>
+</app-split-view>
 
 <!-- Pris -->
-<app-container id="price" image="assets/images/tandemhopp/solo.jpg">
+<app-split-view id="price" image="assets/images/tandemhopp/solo.jpg" [color]="bacgrkoundColor2" reverse="true">
   <div id="maincontent_repeat">
     <div class="content_text_repeat"><h1>Pris</h1><br><br>
     
@@ -214,6 +201,6 @@
     </div>
     </div>
     </div>
-</app-container>
+</app-split-view>
 
 

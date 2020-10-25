@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   slides: sliderViewModel[];
   title = "Så går tandemhoppet till";
   subtitle = "Checklista innan du åker hemifrån";
+  bacgrkoundColor = "#0460D8"; //styles.tandemhoppPrimnary;
+  bacgrkoundColor2 = "#0460a8"; //styles.tandemhoppPrimnary;
 
   scroll(elementId: string) {
     this.controller.scrollToAnchor(elementId);

@@ -1,12 +1,10 @@
 <footer class="footer">
     <div style="height:50rem; width:100%; margin: auto;">
-        <div class="column"[style.background-color]="color">
-            <ng-content *ngIf="!reverse"></ng-content>
-            <img *ngIf="reverse"[src]="image">
+        <div class="column"[style.background-color]="color" [style.float]="reverse ? 'right':'left'" style="padding: 20px;">
+            <ng-content></ng-content>
         </div>
         <div class="column" [style.background-color]="color">
-            <ng-content *ngIf="reverse"></ng-content>
-            <img *ngIf="!reverse"[src]="image">
+            <img [src]="image">
         </div>
       </div>
   </footer>
