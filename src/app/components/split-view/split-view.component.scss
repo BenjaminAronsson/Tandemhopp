@@ -1,0 +1,47 @@
+@import "../..//../styles.scss";
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.column {
+  height: 50rem;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  float: left;
+}
+.footer {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.footer_container {
+  padding-bottom: 67px;
+}
+.footer .section_title h1 {
+  color: white;
+  font-size: xx-large;
+}
+.footer .section_title_container p {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+.footer_row {
+  margin-top: 135px;
+  background-color: rgba($color: $accent--color, $alpha: 0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.footer_title {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}

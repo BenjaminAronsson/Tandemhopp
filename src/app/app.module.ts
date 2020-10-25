@@ -20,6 +20,7 @@ import { ServicesComponent } from "./components/services/services.component";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { ContainerComponent } from './components/container/container.component';
+import { SplitViewComponent } from './components/split-view/split-view.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContainerComponent } from './components/container/container.component';
     SliderComponent,
     ServicesComponent,
     ContainerComponent,
+    SplitViewComponent,
   ],
   imports: [
     BrowserModule,
